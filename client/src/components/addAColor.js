@@ -36,12 +36,15 @@ const AddAColor = (props) => {
 
 
     return(
+        <div className='add-color-box'>
+        <h3>Add a Color</h3>
         <form className='add-color' onSubmit={(event) => submitHandler(event)}>
             <input placeholder='name' name='color' onChange={(event) => changeHandler(event)} value={newColor.color} />
             <input placeholder='hex' name='hex' onChange={(event) => hexChangeHandler(event)} value={newColor.code.hex} />
-            <button type='submit' className='add-color-btn'>add Color</button>
+            <button type='submit' className='add-color-btn'>add</button>
 
         </form>
+        </div>
     )
 }
 export default AddAColor

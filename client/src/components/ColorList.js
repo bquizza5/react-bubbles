@@ -70,8 +70,9 @@ const ColorList = ({ colors, updateColors }) => {
             />
           </li>
         )) : <h2>loading...</h2>}
-        <AddAColor updateColors={updateColors} colors={colors} />
+        
       </ul>
+      <AddAColor updateColors={updateColors} colors={colors} />
       {editing && (
         <form onSubmit={saveEdit}>
           <legend>edit color</legend>
