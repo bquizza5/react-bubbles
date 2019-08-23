@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axiosWithAuth from '../util/axiosWithAuth'
+import AddAColor from './addAColor'
 
 const initialColor = {
   color: "",
@@ -69,6 +70,7 @@ const ColorList = ({ colors, updateColors }) => {
             />
           </li>
         )) : <h2>loading...</h2>}
+        <AddAColor updateColors={updateColors} colors={colors} />
       </ul>
       {editing && (
         <form onSubmit={saveEdit}>
@@ -102,6 +104,7 @@ const ColorList = ({ colors, updateColors }) => {
       )}
       <div className="spacer" />
       {/* stretch - build another form here to add a color */}
+      
     </div>
   );
 };
