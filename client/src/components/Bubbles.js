@@ -26,7 +26,8 @@ const Bubbles = ({ colors }) => {
           nodeEnter={d => ({ ...d, r: 0 })}
           animate
         >
-          {nodes =>
+
+          {bubbleData ? nodes =>
             nodes
               .map(({ x, y, r, key }, i) => {
                 if (i < colors.length) {
@@ -43,7 +44,7 @@ const Bubbles = ({ colors }) => {
                 return null;
               })
               .filter(v => v)
-          }
+          : <h2>loading...</h2>}
         </Pack>
       </Svg>
     </div>
